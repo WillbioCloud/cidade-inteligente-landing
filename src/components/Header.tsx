@@ -26,7 +26,9 @@ export const Header = () => {
           <div className="hidden md:flex items-center space-x-6 text-sm">
             <div className="flex items-center space-x-2 text-muted-foreground">
               <Phone className="w-4 h-4" />
-              <span>(61) 9 9999-9999</span>
+              <a href="tel:+5564993232234" className="hover:text-primary transition-colors">
+                (64) 99323-2234
+              </a>
             </div>
             <div className="flex items-center space-x-2 text-muted-foreground">
               <Mail className="w-4 h-4" />

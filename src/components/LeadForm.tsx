@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { Send, Gift, Star } from "lucide-react";
 
 export const LeadForm = () => {
@@ -12,9 +13,10 @@ export const LeadForm = () => {
     phone: "",
     email: ""
   });
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name || !formData.phone || !formData.email) {
@@ -26,14 +28,47 @@ export const LeadForm = () => {
       return;
     }
 
-    // Simulate form submission
-    toast({
-      title: "Interesse registrado com sucesso! 🎉",
-      description: "Nossa equipe entrará em contato em até 2 horas com as condições especiais.",
-    });
+    setIsLoading(true);
 
-    // Reset form
-    setFormData({ name: "", phone: "", email: "" });
+    try {
+      // Save lead to Supabase
+      const { error } = await supabase
+        .from('leads')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone
+          }
+        ]);
+
+      if (error) throw error;
+
+      // Send WhatsApp message
+      const whatsappNumber = "5564999232217";
+      const message = `Novo interessado no Cidade Inteligente!\n\nNome: ${formData.name}\nTelefone: ${formData.phone}\nEmail: ${formData.email}\n\nPor favor, entre em contato para apresentar as condições especiais.`;
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      
+      // Open WhatsApp in new tab
+      window.open(whatsappUrl, '_blank');
+
+      toast({
+        title: "Interesse registrado com sucesso! 🎉",
+        description: "Nossa equipe entrará em contato em até 2 horas com as condições especiais.",
+      });
+
+      // Reset form
+      setFormData({ name: "", phone: "", email: "" });
+    } catch (error) {
+      console.error('Error saving lead:', error);
+      toast({
+        title: "Erro ao registrar interesse",
+        description: "Tente novamente ou entre em contato diretamente pelo WhatsApp.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -160,9 +195,10 @@ export const LeadForm = () => {
 
                 <Button 
                   type="submit" 
+                  disabled={isLoading}
                   className="w-full btn-hero text-lg py-6 group"
                 >
-                  Quero as Condições Especiais
+                  {isLoading ? "Enviando..." : "Quero as Condições Especiais"}
                   <Send className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
 
