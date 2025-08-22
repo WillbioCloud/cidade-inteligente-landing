@@ -2,15 +2,23 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Download, MapPin } from "lucide-react";
 import mapaImage from "/lovable-uploads/be2ca1fc-963e-4694-93b7-d4a397cb01d0.png";
+import { useToast } from "@/hooks/use-toast";
 
 export const MapSection = () => {
+  const { toast } = useToast();
+
   const handlePdfDownload = () => {
-    // Create a temporary link to simulate PDF download
     const link = document.createElement('a');
-    link.href = '#';
+    link.href = '/memorial-descritivo.pdf'; // Link para o arquivo PDF na pasta public
     link.download = 'cidade-inteligente-memorial-descritivo.pdf';
-    // In a real implementation, this would point to an actual PDF file
-    console.log('PDF download would start here');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    toast({
+      title: "Download Iniciado",
+      description: "O memorial descritivo será baixado em breve.",
+    });
   };
 
   return (

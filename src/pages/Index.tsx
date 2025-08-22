@@ -2,8 +2,11 @@ import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
+import { GallerySection } from "@/components/GallerySection";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import { MapSection } from "@/components/MapSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { FaqSection } from "@/components/FaqSection";
 import { LeadForm } from "@/components/LeadForm";
 import { Footer } from "@/components/Footer";
 
@@ -14,8 +17,11 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <BenefitsSection />
+      <GallerySection />
       <CountdownTimer />
       <MapSection />
+      <TestimonialsSection />
+      <FaqSection />
       <LeadForm />
       <Footer />
     </div>
