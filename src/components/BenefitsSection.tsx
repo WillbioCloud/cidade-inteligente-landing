@@ -1,38 +1,44 @@
 import { Card } from "@/components/ui/card";
-import { TrendingUp, CreditCard, Shield, MapPin, Calendar } from "lucide-react";
+import { TrendingUp, CreditCard, Shield, MapPin, Calendar, Building2, Trees } from "lucide-react";
 
 export const BenefitsSection = () => {
   const benefits = [
     {
-      icon: CreditCard,
-      title: "Financiamento Facilitado",
-      description: "Parcelas que cabem no seu bolso com condições especiais de pagamento",
-      highlight: "Sem juros abusivos"
-    },
-    {
       icon: TrendingUp,
-      title: "Investimento Seguro",
-      description: "Valorização garantida em região de alta demanda e crescimento acelerado",
-      highlight: "ROI comprovado"
+      title: "Valorização expressiva",
+      description: "Alguns lotes tiveram +316% de valorização, com médias anuais de até 45% a 70%, mostrando grande potencial de retorno sobre o investimento.",
+      highlight: "+316% comprovado."
     },
     {
-      icon: MapPin,
-      title: "Localização Premium",
-      description: "Próximo a centros urbanos com infraestrutura completa já instalada",
-      highlight: "Acesso facilitado"
+      icon: Building2,
+      title: "Infraestrutura completa e moderna",
+      description: "Inclui asfalto CBUQ, rede de água, esgoto, iluminação 100% LED, galerias pluviais, ciclovia, irrigação automatizada e sistema de monitoramento interligado à PM.",
+      highlight: "Top Infra"
+    },
+    {
+      icon: Trees,
+      title: "Grande área de lazer e bem-estar",
+      description: "Lago artificial de 30.000 m², calçadão de 1,7 km, praças temáticas (inclusive para TEA), quadras esportivas, academia ao ar livre, espaço PET e áreas de convivência.",
+      highlight: "Lazer Total"
     },
     {
       icon: Shield,
       title: "Documentação Limpa",
       description: "Todos os registros e licenças em dia, garantindo total segurança jurídica",
-      highlight: "100% legalizado"
+      highlight: "R$ 399/mês"
     },
     {
       icon: Calendar,
       title: "Entrega Imediata",
       description: "Lotes prontos para construção com infraestrutura completa disponível",
-      highlight: "Sem espera"
-    }
+      highlight: "Sustentável"
+    },
+    {
+      icon: Calendar,
+      title: "Entrega Imediata",
+      description: "Lotes prontos para construção com infraestrutura completa disponível",
+      highlight: "Avenida 1,7 km"
+    },
   ];
 
   return (

@@ -5,7 +5,6 @@ import { BenefitsSection } from "@/components/BenefitsSection";
 import { GallerySection } from "@/components/GallerySection";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import { MapSection } from "@/components/MapSection";
-import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { FaqSection } from "@/components/FaqSection";
 import { LeadForm } from "@/components/LeadForm";
 import { Footer } from "@/components/Footer";
@@ -20,7 +19,6 @@ const Index = () => {
       <GallerySection />
       <CountdownTimer />
       <MapSection />
-      <TestimonialsSection />
       <FaqSection />
       <LeadForm />
       <Footer />

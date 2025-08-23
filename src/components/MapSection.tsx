@@ -6,11 +6,12 @@ import { useToast } from "@/hooks/use-toast";
 
 export const MapSection = () => {
   const { toast } = useToast();
+  const {}
 
   const handlePdfDownload = () => {
     const link = document.createElement('a');
-    link.href = '/memorial-descritivo.pdf'; // Link para o arquivo PDF na pasta public
-    link.download = 'cidade-inteligente-memorial-descritivo.pdf';
+    link.href = 'REVISTO-DIGITAL.pdf'; // Link para o arquivo PDF na pasta public
+    link.download = 'REVISTA-DIGITAL.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -78,8 +79,9 @@ export const MapSection = () => {
               className="btn-hero text-lg py-6 px-8 group w-full md:w-auto"
             >
               <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-              Baixar Memorial Descritivo (PDF)
+              Baixar Revista Digital (PDF)
             </Button>
+            
           </div>
 
           <Card className="card-gradient p-4 animate-fade-in">
