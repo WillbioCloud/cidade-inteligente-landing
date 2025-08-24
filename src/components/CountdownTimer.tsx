@@ -59,17 +59,18 @@ export const CountdownTimer = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {/* AQUI ESTÁ A MUDANÇA: troquei 'grid' por 'flex' e ajustei o espaçamento */}
+          <div className="flex flex-row justify-center gap-2 md:gap-6">
             {timeUnits.map((unit, index) => (
               <Card 
                 key={unit.label} 
-                className="card-gradient p-6 text-center animate-fade-in border-primary/20"
+                className="card-gradient p-3 md:p-6 text-center animate-fade-in border-primary/20 flex-1"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-1 md:mb-2">
                   {unit.value.toString().padStart(2, '0')}
                 </div>
-                <div className="text-sm md:text-base font-medium text-muted-foreground uppercase tracking-wider">
+                <div className="text-xs md:text-base font-medium text-muted-foreground uppercase tracking-wider">
                   {unit.label}
                 </div>
               </Card>

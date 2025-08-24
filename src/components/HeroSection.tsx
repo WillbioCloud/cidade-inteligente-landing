@@ -29,11 +29,11 @@ export const HeroSection = () => {
             </span>
           </div>
           
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
             Chegou a hora de garantir seu espaço no futuro!
           </h1>
           
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed max-w-3xl mx-auto">
             Lotes planejados com valorização garantida e financiamento facilitado na melhor localização de Santo Antônio do Descoberto.
           </p>
           
@@ -46,7 +46,7 @@ export const HeroSection = () => {
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             
-            <div className="flex items-center space-x-2 text-primary-foreground/90">
+            <div className="flex items-center space-x-2 text-primary-foreground/90 mt-4 sm:mt-0">
               <Zap className="w-5 h-5 text-success" />
               <span className="font-medium">Condições especiais de lançamento</span>
             </div>
@@ -54,12 +54,12 @@ export const HeroSection = () => {
           
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
             <div className="bg-background/10 backdrop-blur-sm rounded-lg p-6 text-center">
-              <h3 className="text-2xl font-bold text-primary-foreground mb-2">200+</h3>
+              <h3 className="text-2xl font-bold text-primary-foreground mb-2">+400</h3>
               <p className="text-primary-foreground/80">Lotes disponíveis</p>
             </div>
             <div className="bg-background/10 backdrop-blur-sm rounded-lg p-6 text-center">
               <h3 className="text-2xl font-bold text-primary-foreground mb-2">100%</h3>
-              <p className="text-primary-foreground/80">Infraestrutura completa</p>
+              <p className="text-primary-foreground/80">Legalizada</p>
             </div>
             <div className="bg-background/10 backdrop-blur-sm rounded-lg p-6 text-center">
               <h3 className="text-2xl font-bold text-primary-foreground mb-2">0%</h3>

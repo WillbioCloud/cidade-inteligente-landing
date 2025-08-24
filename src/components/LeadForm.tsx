@@ -102,7 +102,7 @@ export const LeadForm = () => {
                     Oferta Exclusiva de Lançamento
                   </h3>
                   <p className="text-muted-foreground">
-                    Condições especiais válidas apenas para os primeiros interessados
+                    Condições especiais válidas apenas para os cadastros vips.
                   </p>
                 </div>
               </div>
@@ -116,7 +116,7 @@ export const LeadForm = () => {
                     Atendimento Personalizado
                   </h3>
                   <p className="text-muted-foreground">
-                    Nossa equipe especializada irá apresentar as melhores opções para seu perfil
+                    Meu trabalho é te apresentar as melhores opções para seu perfil.
                   </p>
                 </div>
               </div>

@@ -5,18 +5,77 @@ const images = [
   {
     src: "/lovable-uploads/6c46da27-55e8-45db-8fc6-0fea31792261.png",
     alt: "Vista aérea do loteamento Cidade Inteligente",
-    description: "Vista aérea completa do empreendimento"
+    description: "Vista aérea da Avenida Comercial/Parque Linear"
+  },
+  {
+    src: "/lovable-uploads/Secretaria da Educação.webp",
+    alt: "Entrada moderna do Cidade Inteligente",
+    description: "Secretaria da Educação"
+  },{
+    src: "/lovable-uploads/Secretaria da Saúde.webp",
+    alt: "Entrada moderna do Cidade Inteligente",
+    description: "Secretaria da Saúde"
+  },
+  {
+    src: "/lovable-uploads/Poupa Tempo.webp",
+    alt: "Entrada moderna do Cidade Inteligente",
+    description: "Poupa Tempo para serviços públicos"
+  },
+  {
+    src: "/lovable-uploads/Batalhão da Polícia Militar.webp",
+    alt: "Entrada moderna do Cidade Inteligente",
+    description: "Batalhão da Polícia Militar"
   },
   {
     src: "/lovable-uploads/3cb4a2e6-6842-458a-9868-510de2dde941.png",
     alt: "Entrada moderna do Cidade Inteligente",
-    description: "Pórtico de entrada moderno e imponente"
+    description: "Capela Enumênica"
   },
   {
-    src: "/lovable-uploads/be2ca1fc-963e-4694-93b7-d4a397cb01d0.png",
-    alt: "Mapa ilustrativo do Cidade Inteligente",
-    description: "Mapa ilustrativo com áreas de lazer e infraestrutura"
+    src: "/lovable-uploads/Auditório.webp",
+    alt: "Entrada moderna do Cidade Inteligente",
+    description: "Auditório para eventos e reuniões"
   },
+  {
+    src: "/lovable-uploads/Banco de Mudas.webp",
+    alt: "Entrada moderna do Cidade Inteligente",
+    description: "Banco de Mudas para preservação ambiental"
+  },
+  {
+    src: "/lovable-uploads/Pet-Place.webp",
+    alt: "Entrada moderna do Cidade Inteligente",
+    description: "Pet Place com área de lazer para cães"
+  },
+  {
+    src: "/lovable-uploads/Quadra Poliesportiva.webp",
+    alt: "Entrada moderna do Cidade Inteligente",
+    description: "Quadra Poliesportiva"
+  },
+  {
+    src: "/lovable-uploads/Quadra de Tênis.webp",
+    alt: "Entrada moderna do Cidade Inteligente",
+    description: "Quadra de Tênis"
+  },
+  {
+    src: "/lovable-uploads/Quadra de Areia.webp",
+    alt: "Entrada moderna do Cidade Inteligente",
+    description: "Quadra de Vôlei de Areia"
+  },
+  {
+    src: "/lovable-uploads/Praça Azul TEA.webp",
+    alt: "Entrada moderna do Cidade Inteligente",
+    description: "Praça Azul com brinquedos adaptados para crianças do espectro autista (TEA)"
+  },
+  {
+    src: "/lovable-uploads/Praça de Jogos.webp",
+    alt: "Entrada moderna do Cidade Inteligente",
+    description: "Praça de Jogos"
+  },
+  {
+    src: "/lovable-uploads/Lago.jpg",
+    alt: "Entrada moderna do Cidade Inteligente",
+    description: "Lago Artificial com praia de areia branca"
+  }
 ];
 
 export const GallerySection = () => {

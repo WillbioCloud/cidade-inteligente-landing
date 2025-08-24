@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { TrendingUp, CreditCard, Shield, MapPin, Calendar, Building2, Trees } from "lucide-react";
+import { TrendingUp, CreditCard, Shield, MapPin, Calendar, Building2, Trees, Store, Globe2 } from "lucide-react";
 
 export const BenefitsSection = () => {
   const benefits = [
@@ -13,7 +13,7 @@ export const BenefitsSection = () => {
       icon: Building2,
       title: "Infraestrutura completa e moderna",
       description: "Inclui asfalto CBUQ, rede de água, esgoto, iluminação 100% LED, galerias pluviais, ciclovia, irrigação automatizada e sistema de monitoramento interligado à PM.",
-      highlight: "Top Infra"
+      highlight: "Top Infraestrutura"
     },
     {
       icon: Trees,
@@ -25,18 +25,18 @@ export const BenefitsSection = () => {
       icon: Shield,
       title: "Documentação Limpa",
       description: "Todos os registros e licenças em dia, garantindo total segurança jurídica",
-      highlight: "R$ 399/mês"
+      highlight: "100% Legalizado"
     },
     {
-      icon: Calendar,
-      title: "Entrega Imediata",
-      description: "Lotes prontos para construção com infraestrutura completa disponível",
+      icon: Globe2,
+      title: "Planejamento urbano sustentável",
+      description: "Tecnologia e natureza integradas para um futuro melhor.",
       highlight: "Sustentável"
     },
     {
-      icon: Calendar,
-      title: "Entrega Imediata",
-      description: "Lotes prontos para construção com infraestrutura completa disponível",
+      icon: Store,
+      title: "Potencial comercial e comunitário",
+      description: "Avenida comercial de 1,7 km que valoriza o entorno.",
       highlight: "Avenida 1,7 km"
     },
   ];
@@ -92,21 +92,21 @@ export const BenefitsSection = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="bg-background/10 backdrop-blur-sm rounded-lg p-6">
-              <h4 className="text-2xl font-bold text-primary-foreground mb-2">20%</h4>
-              <p className="text-primary-foreground/90">de entrada facilitada</p>
+              <h4 className="text-2xl font-bold text-primary-foreground mb-2">R$ 5.000,00</h4>
+              <p className="text-primary-foreground/90">de desconto</p>
             </div>
             <div className="bg-background/10 backdrop-blur-sm rounded-lg p-6">
-              <h4 className="text-2xl font-bold text-primary-foreground mb-2">120x</h4>
+              <h4 className="text-2xl font-bold text-primary-foreground mb-2">48x</h4>
               <p className="text-primary-foreground/90">parcelas sem juros</p>
             </div>
             <div className="bg-background/10 backdrop-blur-sm rounded-lg p-6">
-              <h4 className="text-2xl font-bold text-primary-foreground mb-2">0%</h4>
-              <p className="text-primary-foreground/90">de taxa administrativa</p>
+              <h4 className="text-2xl font-bold text-primary-foreground mb-2">Até 50% de Desconto</h4>
+              <p className="text-primary-foreground/90">Com o Plano Construtor</p>
             </div>
           </div>
           
           <p className="text-lg text-primary-foreground/90 mb-6">
-            ⚡ Oferta por tempo limitado - Apenas os primeiros 50 lotes
+            ⚡ Oferta por tempo limitado!!!
           </p>
         </div>
       </div>

@@ -40,6 +40,13 @@ export const Footer = () => {
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-primary" />
                 <span className="text-background/80">Santo Antônio do Descoberto - GO</span>
+                <a
+                  href="https://maps.app.goo.gl/3a3gzUomDvtiafDq8" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-background/80 hover:text-background transition-colors"
+                >
+                </a>
               </div>
             </div>
           </div>
@@ -47,12 +54,8 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Horário de Atendimento</h4>
             <div className="space-y-2">
-              <p className="text-background/80">Segunda a Sexta</p>
-              <p className="text-sm text-background/60">8:00 - 18:00</p>
-              <p className="text-background/80 mt-3">Sábados</p>
-              <p className="text-sm text-background/60">8:00 - 14:00</p>
-              <p className="text-background/80 mt-3">Domingos e Feriados</p>
-              <p className="text-sm text-background/60">Apenas WhatsApp</p>
+              <p className="text-background/80">Segunda à Domingo</p>
+              <p className="text-sm text-background/60">7h às 22h</p>
             </div>
           </div>
 
@@ -69,7 +72,9 @@ export const Footer = () => {
                 <span>WhatsApp</span>
               </a>
               <a 
-                href="#" 
+                href="https://www.instagram.com/ricardocorretorfbz/" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="flex items-center space-x-3 text-background/80 hover:text-primary transition-colors"
               >
                 <Instagram className="w-5 h-5" />
@@ -87,7 +92,7 @@ export const Footer = () => {
             <div className="mt-6 p-4 bg-primary/10 rounded-lg">
               <p className="text-sm text-background/90 font-medium mb-2">🏆 Corretor Credenciado</p>
               <p className="text-xs text-background/70">
-                CRECI-DF: 12345 • Especialista em loteamentos
+                CRECI-GO: 12345 • Especialista em loteamentos
               </p>
             </div>
           </div>
