@@ -42,10 +42,10 @@ export const Footer = () => {
                   href="https://maps.app.goo.gl/3a3gzUomDvtiafDq8" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-background/70 hover:text-background transition-colors"
+                  className="text-background/90 hover:text-background transition-colors"
                 >
                 <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-background/60">Santo Antônio do Descoberto - GO</span>
+                <span>Santo Antônio do Descoberto - GO</span>
                 </a>
               </div>
             </div>
