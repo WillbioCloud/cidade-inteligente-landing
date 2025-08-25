@@ -48,9 +48,8 @@ export const AboutSection = () => {
   };
 
   const handleCardClick = (title: string) => {
-    if (window.innerWidth < 1024) { // Applies only to mobile/tablet devices
-      setActiveCard(activeCard === title ? null : title);
-    }
+    // This function now correctly handles clicks on any device size
+    setActiveCard(activeCard === title ? null : title);
   };
 
   return (
@@ -75,12 +74,13 @@ export const AboutSection = () => {
             return (
               <Card
                 key={index}
-                className="card-gradient p-6 text-center animate-fade-in relative overflow-hidden"
+                className="card-gradient p-6 text-center animate-fade-in relative overflow-hidden cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
                 onMouseEnter={() => window.innerWidth >= 1024 && setActiveCard(feature.title)}
                 onMouseLeave={() => window.innerWidth >= 1024 && setActiveCard(null)}
                 onClick={() => handleCardClick(feature.title)}
               >
+                {/* Content visible when the card is not active */}
                 <div className={`transition-opacity duration-300 ${isActive ? 'opacity-0' : 'opacity-100'}`}>
                   <div className="w-16 h-16 bg-gradient-to-r from-primary to-success rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-8 h-8 text-primary-foreground" />
@@ -91,12 +91,20 @@ export const AboutSection = () => {
                   <p className="text-muted-foreground">
                     {feature.description}
                   </p>
+                  {/* Mobile-only call to action */}
+                  <div className="lg:hidden mt-4 text-xs text-primary font-semibold">
+                    Toque para ver a imagem
+                  </div>
                 </div>
 
-                <div className={`absolute inset-0 transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0'}`}>
+                {/* Content visible when the card is active (image and overlay) */}
+                <div className={`absolute inset-0 transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                   <img src={featureImages[feature.title]} alt={feature.title} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-black bg-opacity-15 flex items-center justify-center">
-                    
+                  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center p-4">
+                      <div className="text-center text-white">
+                          <Eye className="w-8 h-8 mx-auto mb-2" />
+                          <p className="font-semibold">{feature.title}</p>
+                      </div>
                   </div>
                 </div>
               </Card>
