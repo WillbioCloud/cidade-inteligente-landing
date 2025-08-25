@@ -40,3 +40,44 @@
 .read-the-docs {
   color: #888;
 }
+.animated-border-box {
+  position: relative;
+  background: #1c1c1c; /* Cor de fundo do card do formulário */
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 2px; /* Espessura da borda */
+  z-index: 1;
+}
+
+.animated-border-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(transparent, #00ccff, #d400d4, transparent 30%);
+  animation: animate 6s linear infinite;
+  z-index: -2;
+}
+
+.animated-border-box::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: #1c1c1c; /* Deve ser a mesma cor de fundo do .animated-border-box */
+    border-radius: 6px; /* Um pouco menor que o border-radius principal */
+    z-index: -1;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+},

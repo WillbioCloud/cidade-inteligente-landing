@@ -173,3 +173,54 @@ All colors MUST be HSL.
     transform: translateY(0);
   }
 }
+/* Cole este código no final do seu arquivo src/index.css */
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* O container que terá a borda animada */
+.animated-border-card {
+  position: relative;
+  z-index: 0;
+  border-radius: 0.75rem; /* O mesmo border-radius do Card do ShadCN */
+}
+
+/* A camada da borda e do brilho (glow) */
+.animated-border-card::before,
+.animated-border-card::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -3px;  /* Espessura da borda */
+  left: -3px; /* Espessura da borda */
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  border-radius: inherit; /* Usa o mesmo border-radius do pai */
+  background-image: conic-gradient(
+    from var(--angle),
+    #ff4545,
+    #00ff99,
+    #006aff,
+    #ff0095,
+    #ff4545
+  );
+  animation: 3s spin linear infinite;
+}
+
+/* Camada de brilho (glow) */
+.animated-border-card::before {
+  filter: blur(1.5rem);
+  opacity: 0.7;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}

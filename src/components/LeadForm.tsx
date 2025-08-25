@@ -137,76 +137,81 @@ export const LeadForm = () => {
               </div>
             </div>
 
-            <Card className="card-gradient p-8 animate-fade-in">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-foreground mb-2">
-                  Tenho Interesse
-                </h3>
-                <p className="text-muted-foreground">
-                  Preencha e receba condições especiais de lançamento
-                </p>
-              </div>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Label htmlFor="name" className="text-foreground font-medium">
-                    Nome completo *
-                  </Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Seu nome completo"
-                    className="mt-2"
-                  />
+            {/* --- ÁREA MODIFICADA --- */}
+            <div className="animated-border-card animate-fade-in">
+              <Card className="p-8">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-foreground mb-2">
+                    Tenho Interesse
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Preencha e receba condições especiais de lançamento
+                  </p>
                 </div>
 
-                <div>
-                  <Label htmlFor="phone" className="text-foreground font-medium">
-                    WhatsApp *
-                  </Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder="(61) 9 9999-9999"
-                    className="mt-2"
-                  />
-                </div>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <Label htmlFor="name" className="text-foreground font-medium">
+                      Nome completo *
+                    </Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      type="text"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Seu nome completo"
+                      className="mt-2"
+                    />
+                  </div>
 
-                <div>
-                  <Label htmlFor="email" className="text-foreground font-medium">
-                    E-mail *
-                  </Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="seu@email.com"
-                    className="mt-2"
-                  />
-                </div>
+                  <div>
+                    <Label htmlFor="phone" className="text-foreground font-medium">
+                      WhatsApp *
+                    </Label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="(61) 9 9999-9999"
+                      className="mt-2"
+                    />
+                  </div>
 
-                <Button 
-                  type="submit" 
-                  disabled={isLoading}
-                  className="w-full btn-hero text-lg py-6 group"
-                >
-                  {isLoading ? "Enviando..." : "Quero as Condições Especiais"}
-                  <Send className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                  <div>
+                    <Label htmlFor="email" className="text-foreground font-medium">
+                      E-mail *
+                    </Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="seu@email.com"
+                      className="mt-2"
+                    />
+                  </div>
 
-                <p className="text-xs text-muted-foreground text-center">
-                  Seus dados estão seguros e não serão compartilhados com terceiros
-                </p>
-              </form>
-            </Card>
+                  <Button 
+                    type="submit" 
+                    disabled={isLoading}
+                    className="w-full btn-hero text-lg py-6 group"
+                  >
+                    {isLoading ? "Enviando..." : "Quero as Condições Especiais"}
+                    <Send className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+
+                  <p className="text-xs text-muted-foreground text-center">
+                    Seus dados estão seguros e não serão compartilhados com terceiros
+                  </p>
+                </form>
+              </Card>
+            </div>
+            {/* --- FIM DA ÁREA MODIFICADA --- */}
+
           </div>
         </div>
       </div>
