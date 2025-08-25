@@ -13,7 +13,7 @@ export const AboutSection = () => {
     },
     {
       icon: GraduationCap,
-      title: "Scretaria da Educação",
+      title: "Secretaria da Educação",
       description: "Responsável por formular e implementar políticas educacionais, garantir a qualidade do ensino, promover a inclusão e a equidade, além de apoiar o desenvolvimento profissional dos educadores."
     },
     {
@@ -40,7 +40,7 @@ export const AboutSection = () => {
 
   const featureImages: { [key: string]: string } = {
     "Secretaria da Saúde": "/lovable-uploads/Secretaria da Saúde.webp",
-    "Scretaria da Educação": "/lovable-uploads/Secretaria da Educação.webp",
+    "Secretaria da Educação": "/lovable-uploads/Secretaria da Educação.webp",
     "Poupa-Tempo": "/lovable-uploads/Poupa Tempo.webp",
     "Auditório": "/lovable-uploads/Auditório.webp",
     "Batalhão da Polícia Militar": "/lovable-uploads/Batalhão da Polícia Militar.webp",
@@ -95,7 +95,8 @@ export const AboutSection = () => {
 
                 <div className={`absolute inset-0 transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0'}`}>
                   <img src={featureImages[feature.title]} alt={feature.title} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-black bg-opacity-15 flex items-center justify-center">
+                    
                   </div>
                 </div>
               </Card>

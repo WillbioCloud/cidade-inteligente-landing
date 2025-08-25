@@ -21,7 +21,7 @@ export const Header = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground">Cidade Inteligente</h1>
-              <p className="text-sm text-muted-foreground">2ª Etapa</p>
+              <p className="text-sm text-muted-foreground">2ª Etapa - Etapa do Lago</p>
             </div>
           </div>
           
