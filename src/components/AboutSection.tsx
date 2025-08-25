@@ -48,7 +48,6 @@ export const AboutSection = () => {
   };
 
   const handleCardClick = (title: string) => {
-    // This function now correctly handles clicks on any device size
     setActiveCard(activeCard === title ? null : title);
   };
 
@@ -70,42 +69,47 @@ export const AboutSection = () => {
           {features.map((feature, index) => {
             const Icon = feature.icon;
             const isActive = activeCard === feature.title;
+            const backgroundImage = featureImages[feature.title];
 
             return (
               <Card
                 key={index}
-                className="card-gradient p-6 text-center animate-fade-in relative overflow-hidden cursor-pointer"
+                className="text-center animate-fade-in relative overflow-hidden cursor-pointer h-80 transition-all duration-300 group"
                 style={{ animationDelay: `${index * 0.1}s` }}
                 onMouseEnter={() => window.innerWidth >= 1024 && setActiveCard(feature.title)}
                 onMouseLeave={() => window.innerWidth >= 1024 && setActiveCard(null)}
                 onClick={() => handleCardClick(feature.title)}
               >
-                {/* Content visible when the card is not active */}
-                <div className={`transition-opacity duration-300 ${isActive ? 'opacity-0' : 'opacity-100'}`}>
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary to-success rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-8 h-8 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {feature.description}
-                  </p>
-                  {/* Mobile-only call to action */}
-                  <div className="lg:hidden mt-4 text-xs text-primary font-semibold">
-                    Toque para ver a imagem
-                  </div>
-                </div>
+                {/* Imagem de Fundo (Borrada ou Nítida) */}
+                <img 
+                  src={backgroundImage} 
+                  alt={feature.title} 
+                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 ${isActive ? 'blur-none scale-100' : 'blur-sm scale-110'}`} 
+                />
+                {/* Overlay Escuro */}
+                <div className={`absolute inset-0 bg-black transition-opacity duration-500 ${isActive ? 'bg-opacity-40' : 'bg-opacity-60'}`}></div>
 
-                {/* Content visible when the card is active (image and overlay) */}
-                <div className={`absolute inset-0 transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-                  <img src={featureImages[feature.title]} alt={feature.title} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center p-4">
-                      <div className="text-center text-white">
-                          <Eye className="w-8 h-8 mx-auto mb-2" />
-                          <p className="font-semibold">{feature.title}</p>
-                      </div>
-                  </div>
+                {/* Conteúdo do Card (Texto) */}
+                <div className={`relative z-10 flex flex-col items-center justify-center h-full p-6 text-white transition-opacity duration-300 ${isActive ? 'opacity-0' : 'opacity-100'}`}>
+                    <div className="w-16 h-16 bg-gradient-to-r from-primary to-success rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-white/50">
+                        <Icon className="w-8 h-8 text-primary-foreground" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">
+                        {feature.title}
+                    </h3>
+                    <p className="text-white/80 text-sm">
+                        {feature.description}
+                    </p>
+                    {/* Aviso para Mobile */}
+                    <div className="lg:hidden mt-4 bg-primary/80 text-primary-foreground text-xs font-bold px-3 py-1 rounded-full animate-pulse">
+                        Toque para ver a imagem
+                    </div>
+                </div>
+                
+                {/* Ícone de "Ver Imagem" que aparece no hover/clique */}
+                <div className={`absolute inset-0 z-20 flex flex-col items-center justify-center text-white transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                  <Eye className="w-10 h-10 mb-2" />
+                  <p className="font-semibold">{feature.title}</p>
                 </div>
               </Card>
             );
