@@ -38,14 +38,14 @@ export const Footer = () => {
                 <span className="text-background/80">contato@cidadeinteligente.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-background/80">Santo Antônio do Descoberto - GO</span>
                 <a
                   href="https://maps.app.goo.gl/3a3gzUomDvtiafDq8" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-background/80 hover:text-background transition-colors"
+                  className="text-background/70 hover:text-background transition-colors"
                 >
+                <MapPin className="w-4 h-4 text-primary" />
+                <span className="text-background/60">Santo Antônio do Descoberto - GO</span>
                 </a>
               </div>
             </div>
@@ -80,19 +80,12 @@ export const Footer = () => {
                 <Instagram className="w-5 h-5" />
                 <span>Instagram</span>
               </a>
-              <a 
-                href="#" 
-                className="flex items-center space-x-3 text-background/80 hover:text-secondary transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
-                <span>Facebook</span>
-              </a>
             </div>
             
             <div className="mt-6 p-4 bg-primary/10 rounded-lg">
               <p className="text-sm text-background/90 font-medium mb-2">🏆 Corretor Credenciado</p>
               <p className="text-xs text-background/70">
-                CRECI-GO: 12345 • Especialista em loteamentos
+                Especialista em loteamentos
               </p>
             </div>
           </div>
@@ -101,7 +94,7 @@ export const Footer = () => {
         <div className="border-t border-background/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-background/60 text-sm">
-              © 2024 Cidade Inteligente. Todos os direitos reservados.
+              © 2025 FBZ. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-background/60 hover:text-background transition-colors">
