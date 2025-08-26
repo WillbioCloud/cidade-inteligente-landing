@@ -101,8 +101,9 @@ export const GallerySection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="-left-12" />
-          <CarouselNext className="-right-12" />
+          {/* --- BOTÕES MODIFICADOS ABAIXO --- */}
+          <CarouselPrevious className="hidden md:flex -left-12" />
+          <CarouselNext className="hidden md:flex -right-12" />
         </Carousel>
       </div>
     </section>
