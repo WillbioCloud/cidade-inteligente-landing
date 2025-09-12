@@ -85,7 +85,7 @@ export const Footer = () => {
             <div className="mt-6 p-4 bg-primary/10 rounded-lg">
               <p className="text-sm text-background/90 font-medium mb-2">🏆 Corretor Credenciado</p>
               <p className="text-xs text-background/70">
-                Especialista em loteamentos
+                CRECI: 104.042 - FBZ Imobiliária
               </p>
             </div>
           </div>

@@ -221,3 +221,35 @@ All colors MUST be HSL.
     --angle: 360deg;
   }
 }
+/* Adicione no final do arquivo src/index.css */
+
+.pulsing-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ef4444; /* red-500 */
+  border-radius: 50%;
+  animation: pulse 1.5s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+/* Adicione no final do arquivo src/index.css */
+
+.animate-glow {
+  animation: glow 2.5s infinite ease-in-out;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+}

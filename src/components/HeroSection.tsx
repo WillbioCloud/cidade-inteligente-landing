@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Zap } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 export const HeroSection = () => {
   const scrollToForm = () => {
@@ -44,7 +45,7 @@ export const HeroSection = () => {
               onClick={scrollToForm}
               className="btn-hero text-lg px-8 py-4 group"
             >
-              Reserve já seu lote
+              Garanta já seu lote
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
 
@@ -54,12 +55,38 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* --- LINHA MODIFICADA ABAIXO --- */}
           <div className="mt-8 grid grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto">
-            <div className="bg-background/10 backdrop-blur-sm rounded-lg p-4 md:p-6 text-center">
-              <h3 className="text-xl md:text-2xl font-bold text-primary-foreground mb-2">+400</h3>
-              <p className="text-sm text-primary-foreground/80">Lotes disponíveis</p>
-            </div>
+            
+            {/* --- CARD INTERATIVO DE LOTES DISPONÍVEIS --- */}
+            <Dialog>
+              <DialogTrigger asChild>
+                {/* A classe 'animate-glow' foi adicionada aqui */}
+                <div className="bg-background/20 backdrop-blur-sm rounded-lg p-4 md:p-6 text-center cursor-pointer transition-transform hover:scale-105 animate-glow border border-white/20">
+                  <h3 className="text-xl md:text-2xl font-bold text-primary-foreground mb-2">Lotes</h3>
+                  <p className="text-sm text-primary-foreground/80">Disponíveis</p>
+                </div>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle className="flex items-center gap-3">
+                    <div className="pulsing-dot"></div>
+                    Status dos Lotes
+                  </DialogTitle>
+                </DialogHeader>
+                <div className="py-4 text-center">
+                  <p className="text-sm text-muted-foreground mb-2">(em tempo real)</p>
+                  <p className="text-5xl font-bold text-foreground">
+                    <span className="text-destructive">25</span> / 447
+                  </p>
+                  <p className="font-medium text-muted-foreground mt-2">Lotes Restantes</p>
+                </div>
+                <Button onClick={scrollToForm} className="w-full">
+                  Garanta o seu agora!
+                </Button>
+              </DialogContent>
+            </Dialog>
+            {/* --- FIM DO CARD INTERATIVO --- */}
+
             <div className="bg-background/10 backdrop-blur-sm rounded-lg p-4 md:p-6 text-center">
               <h3 className="text-xl md:text-2xl font-bold text-primary-foreground mb-2">100%</h3>
               <p className="text-sm text-primary-foreground/80">Legalizada</p>

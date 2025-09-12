@@ -94,7 +94,7 @@ export const Header = () => {
       </header>
 
       {/* --- FITA DE LANÇAMENTO ADICIONADA AQUI --- */}
-      <div className="bg-red-600 text-white text-center py-4 shadow-lg font-bold text-2xl tracking-widest uppercase">
+      <div className="bg-red-600 text-white text-center py-4 shadow-lg font-bold text-sm tracking-widest uppercase">
           Lançamento 
       </div>
     </div>
