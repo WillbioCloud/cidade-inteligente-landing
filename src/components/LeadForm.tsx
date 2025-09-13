@@ -194,7 +194,7 @@ Por favor, entre em contato para apresentar as condições especiais.
                     <Select value={formData.lotPreference} onValueChange={handleSelectChange('lotPreference')}>
                         <SelectTrigger className="mt-2"><SelectValue placeholder="Selecione uma preferência" /></SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="Frente para o Lago">De frente para o Lago</SelectItem>
+                            <SelectItem value="Frente para o Lago">Frente para o Lago</SelectItem>
                             <SelectItem value="Avenida Comercial">Lote na avenida comercial</SelectItem>
                             <SelectItem value="Mais barato">O lote mais barato</SelectItem>
                         </SelectContent>
